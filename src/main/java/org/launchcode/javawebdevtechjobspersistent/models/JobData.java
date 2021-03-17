@@ -22,7 +22,6 @@ public class JobData {
      * @return List of all jobs matching the criteria.
      */
     public static ArrayList<Job> findByColumnAndValue(String column, String value, Iterable<Job> allJobs) {
-
         ArrayList<Job> results = new ArrayList<>();
 
         if (value.toLowerCase().equals("all")){
