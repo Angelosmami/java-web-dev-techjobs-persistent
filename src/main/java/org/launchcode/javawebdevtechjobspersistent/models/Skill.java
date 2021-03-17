@@ -1,18 +1,17 @@
 package org.launchcode.javawebdevtechjobspersistent.models;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Entity
 public class Skill extends AbstractEntity {
 
-    @NotBlank
-    @Size
     private long skill;
 
-    public Skill (int id, String name, long skill){
-        super();
+    public Skill ( long skill){
         this.skill = skill;
     }
 
