@@ -9,19 +9,20 @@ import javax.validation.constraints.Size;
 @Entity
 public class Skill extends AbstractEntity {
 
-    private long skill;
+    @Size (min = 2, max = 500, message = "Skill must be between 2 and 500 characters")
+    private String description;
 
-    public Skill ( long skill){
-        this.skill = skill;
+    public Skill ( String description){
+        this.description = description;
     }
 
     public Skill () {}
 
-    public long getSkill() {
-        return skill;
+    public String getDescription() {
+        return description;
     }
 
-    public void setSkill(long skill) {
-        this.skill = skill;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
