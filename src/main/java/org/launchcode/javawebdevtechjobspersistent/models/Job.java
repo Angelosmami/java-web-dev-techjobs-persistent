@@ -33,7 +33,7 @@ public class Job extends AbstractEntity{
         this.employer = employer;
     }
 
-    public Iterable<Skill> getSkills() {
+    public List<Skill> getSkills() {
         return this.skills;
     }
 
