@@ -11,5 +11,12 @@ WHERE (location = "St. Louis City");
 
 
 ## Part 3: Test it with SQL
+DROP TABLE job;
 
 ## Part 4: Test it with SQL
+SELECT name, description
+FROM skills
+INNER JOIN job_skills on skills.id = job_skills.skills_id
+WHERE job_id IS NOT NULL
+order by skill.name asc;
+
