@@ -13,13 +13,13 @@ import java.util.List;
 public class Skill extends AbstractEntity {
 
     @ManyToMany(mappedBy = "skills")
-    public List<Job> jobs = new ArrayList<>();
+    private List<Job> jobs = new ArrayList<>();
 
 
     @Size (min = 2, max = 500, message = "Skill must be between 2 and 500 characters")
     private String description;
 
-    public Skill ( String description){
+    public Skill (String description){
         this.description = description;
     }
 
@@ -34,5 +34,7 @@ public class Skill extends AbstractEntity {
     }
 
     public List<Job> getJobs() { return jobs; }
+
+    public void setJobs(List<Job>jobs) {this.jobs = jobs; }
 
 }
